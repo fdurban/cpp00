@@ -6,7 +6,7 @@
 /*   By: fdurban- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 12:21:17 by fdurban-          #+#    #+#             */
-/*   Updated: 2025/10/23 17:30:12 by fdurban-         ###   ########.fr       */
+/*   Updated: 2025/10/29 14:04:53 by fdurban-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@
 
 int main()
 {
-	PhoneBook	phonebook;
+	Contact contacto("Pepe", "San", "manolito", 6755, "secreto");
+	contacto.printFullInfo();
+
+	PhoneBook phonebook;
 	std::string	input;
 	std::string	data[5];
 	while(1)
@@ -39,11 +42,13 @@ int main()
 			std::getline(std::cin, data[3]);
 			std::cout<<"Deepest Secret:";
 			std::getline(std::cin, data[4]);
-			phonebook.add_contact(data);
+			Contact contacto3(data[0], data[1], data[2], 865, data[4]);
+			phonebook.addContact(contacto3);
+			phonebook.printContact();
 		}
 		else if(input == "SEARCH")
 		{
-			phonebook.display_phonebook();
+		
 		}
-	}
+	} 
 }
