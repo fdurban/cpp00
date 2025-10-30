@@ -6,7 +6,7 @@
 /*   By: fdurban- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:09:43 by fdurban-          #+#    #+#             */
-/*   Updated: 2025/10/29 13:39:50 by fdurban-         ###   ########.fr       */
+/*   Updated: 2025/10/30 15:41:59 by fdurban-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,30 @@ std::string Contact::getFirstName() {
 	return (this->FirstName);
 }
 
-void	Contact::setFirstName(std::string name) {
-	this->FirstName = name;
+std::string Contact::getLastName() {
+	return (this->LastName);
+}
+
+std::string Contact::getNickName() {
+	return (this->NickName);
+}
+
+int	Contact::getPhoneNumber() {
+	return (this->PhoneNumber);
+}
+
+std::string Contact::getDarkestSecret() {
+	return (this->DarkestSecret);
 }
 
 void    Contact::printFullInfo() {
-	std::cout << getFirstName() << std::endl;
-	std::cout << this->LastName << std::endl;
-	std::cout << this->NickName << std::endl;
-	std::cout << this->PhoneNumber << std::endl;
-	std::cout << this->DarkestSecret << std::endl;
-	
+	std::cout << this->FirstName;
+	std::cout << this->LastName;
+	std::cout << this->NickName;
+	std::cout << this->PhoneNumber<<std::endl;	
 }
+
+
 
 /*
 void	Contact::set_first_name(const std::string& FirstName)

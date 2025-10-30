@@ -6,7 +6,7 @@
 /*   By: fdurban- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 12:59:18 by fdurban-          #+#    #+#             */
-/*   Updated: 2025/10/29 13:57:17 by fdurban-         ###   ########.fr       */
+/*   Updated: 2025/10/30 15:36:35 by fdurban-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@ class PhoneBook
 		PhoneBook();
 		void	addContact(const Contact& contact);
 		void	printContact();
+		void	displayContactDetails(int index);
+		int	getSize();
+		int	toint(const std::string& s);
 		//void	add_contact(const Contact& contact);
 		//void	display_contacts();
 		//void	display_phonebook();
