@@ -6,7 +6,7 @@
 /*   By: fdurban- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 12:10:48 by fdurban-          #+#    #+#             */
-/*   Updated: 2025/10/30 17:24:11 by fdurban-         ###   ########.fr       */
+/*   Updated: 2025/11/03 15:53:15 by fdurban-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	print_value(std::string str) {
 	unsigned int	i;
 	
 	i = 0;
-	if (str.length() > 12)
+	if (str.length() > 10)
 	{
 		std::cout<<str.substr(0,9);
 		std::cout<<'.';
@@ -33,11 +33,13 @@ void	print_value(std::string str) {
 	}
 }
 
-PhoneBook::PhoneBook() : size(0) {}
+PhoneBook::PhoneBook() : size(0), index(0){}
 
 void   PhoneBook::addContact(const Contact& contact) {
-	contactos[size % 8] = contact;
-	size++;
+	contactos[index % 8] = contact;
+	index++;
+	if(size < 8)
+		size++;
 }
 
 void   PhoneBook::printContact() {
@@ -83,13 +85,3 @@ int	PhoneBook::toint(const std::string& s) {
 		return (-1);
 	return (result);
 }
-/*
-PhoneBook::PhoneBook(const Contact& contact) {
-	this->contacts.push_back(contact);
-}
-
-void	PhoneBook::display_contacts() {
-	for (size_t i = 0; i < this->contacts.size(); i++) {
-		std::cout << this->contacts[i] << std::endl;
-	}
-}*/

@@ -6,19 +6,18 @@
 /*   By: fdurban- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 12:59:18 by fdurban-          #+#    #+#             */
-/*   Updated: 2025/10/30 15:36:35 by fdurban-         ###   ########.fr       */
+/*   Updated: 2025/11/03 16:45:06 by fdurban-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 #include <iostream>
-#include <vector>
 class PhoneBook
 {
 	private:
 		Contact contactos[8];
 		int	size;
-		//int	index;
+		int	index;
 	public:
 		PhoneBook();
 		void	addContact(const Contact& contact);
@@ -26,7 +25,4 @@ class PhoneBook
 		void	displayContactDetails(int index);
 		int	getSize();
 		int	toint(const std::string& s);
-		//void	add_contact(const Contact& contact);
-		//void	display_contacts();
-		//void	display_phonebook();
 };
