@@ -1,4 +1,4 @@
-NAME = megaphone
+NAME = phonebook
 
 CPP = c++
 
@@ -6,7 +6,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 RM = rm -rf
 
-SRC = megaphone.cpp
+SRC = main.cpp PhoneBook.cpp Contact.cpp
 
 OBJS = $(SRC:.cpp=.o)
 
@@ -23,3 +23,4 @@ clean:
 fclean:
 	$(RM) $(OBJS) $(NAME)
 re: fclean all
+
